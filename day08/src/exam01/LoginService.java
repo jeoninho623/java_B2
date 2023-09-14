@@ -10,7 +10,7 @@ public class LoginService {
                 throw new UserIdException("가입되지 않은 회원입니다");
             }
 
-            if (!userPw.equals(("1234"))) {
+            if (!userPw.equals("1234")) {
                 throw new UserPwException("비밀번호가 일치하지 않습니다.");
             }
 
