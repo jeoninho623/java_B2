@@ -7,5 +7,8 @@ public class Ex_Equals01 {
 
         System.out.printf("b1 == b2 : %s%n", b1 == b2);
         System.out.printf("b1.equals(b2) : %s%n", b1.equals(b2));
+
+        System.out.println("b1 주소 : " + System.identityHashCode(b1));
+        System.out.println("b2 주소 : " + System.identityHashCode(b2));
     }
 }

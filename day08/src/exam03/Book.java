@@ -1,5 +1,7 @@
 package exam03;
 
+import java.util.Objects;
+
 public class Book {
     private String title;       // 제목
     private String author;      // 저자
@@ -41,6 +43,23 @@ public class Book {
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", publisher='" + publisher + '\'' +
+                ", hashCode()='" + hashCode() + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) { // Object obj = b1
+        if (obj instanceof Book) {
+            Book book = (Book)obj;
+            if(title.equals(book.title) & author.equals(book.author) && publisher.equals(book.publisher)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, author, publisher);
     }
 }
