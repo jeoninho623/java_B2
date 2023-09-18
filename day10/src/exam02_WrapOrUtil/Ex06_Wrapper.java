@@ -1,4 +1,4 @@
-package exam02_WraOrUtil;
+package exam02_WrapOrUtil;
 
 public class Ex06_Wrapper {
     public static void main(String[] args) {
