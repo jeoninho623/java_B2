@@ -11,5 +11,6 @@ public class Ex07_String {
 
         str = str.replace("Apple", "PineApple");
         System.out.println(str);
+
     }
 }
