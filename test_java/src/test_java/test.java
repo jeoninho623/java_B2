@@ -45,5 +45,9 @@ public class test {
         List<Character> spell3 = List.of('s', 'o', 'm', 'd');
         List<String> dic3 = List.of("moos", "dzx", "smm", "sunmmo", "som");
         System.out.println(checkWordExistence(spell3, dic3)); // 2
+
+
+
+
     }
 }
