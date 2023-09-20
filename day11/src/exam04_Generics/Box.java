@@ -14,4 +14,8 @@ public class Box<T extends Fruit & Eatable> { // Fruit, Apple, Melon ... & Eatab
     public void printInfo() {
         System.out.println(item.getInfo());
     }
+
+    public <T, U> void method(T t, U u) {
+
+    }
 }

@@ -6,9 +6,9 @@ public class Ex01_Gen {
         appleBasket.add(new Apple());
         appleBasket.add(new Apple());
 
-        Juicier.make(appleBasket);
+        Juicier.make3(appleBasket);
 
-        Basket<Melon> melonBasket = new Basket<>();
+        Basket<Fruit> melonBasket = new Basket<>();
         melonBasket.add(new Melon());
         melonBasket.add(new Melon());
 
