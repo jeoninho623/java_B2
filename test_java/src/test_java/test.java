@@ -1,4 +1,3 @@
-/*
 package test_java;
 
 import java.util.ArrayList;
@@ -11,10 +10,9 @@ public class test {
             boolean isValidWord = true; // 현재 단어가 유효한지 여부를 추적하는 변수입니다.
 
             // 현재 단어의 각 문자를 검사합니다.
-            */
-/*for (char c : word.toCharArray()) {
+for (char c : word.toCharArray()) {
                 if (remainingSpell.contains(c)) { // 사용되지 않은 문자 중에 현재 문자가 있으면 사용된 것으로 표시합니다.
-                    remainingSpell.remove(remainingSpell.indexOf(c));*//*
+                    remainingSpell.remove(remainingSpell.indexOf(c));
 
                 } else {
                     isValidWord = false; // 현재 문자가 사용되지 않은 문자 중에 없으면 현재 단어는 유효하지 않은 것으로 표시합니다.
@@ -54,4 +52,3 @@ public class test {
 
     }
 }
-*/
