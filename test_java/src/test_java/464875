@@ -1,0 +1,55 @@
+import java.util.Arrays;
+
+public class Solution {
+    public int[] solution(int[] lottos, int[] win_nums) {
+        int[] answer = new int[2];
+        
+        // 로또 번호와 당첨 번호를 정렬합니다.
+        Arrays.sort(lottos);
+        Arrays.sort(win_nums);
+        
+        int minMatchCount = 0;
+        int zeroCount = 0;
+        
+        // 로또 번호와 당첨 번호를 비교하여 일치하는 숫자의 개수와 알아볼 수 없는 숫자(0)의 개수를 세줍니다.
+        for (int i = 0; i < 6; i++) {
+            if (lottos[i] == 0) {
+                zeroCount++;
+            } else {
+                for (int j = 0; j < 6; j++) {
+                    if (lottos[i] == win_nums[j]) {
+                        minMatchCount++;
+                        break;
+                    }
+                }
+            }
+        }
+        
+        // 최고 순위 계산: 알아볼 수 없는 숫자(0)와 일치한 숫자 개수를 고려하여 계산합니다.
+        int maxMatchCount = minMatchCount + zeroCount;
+        
+        // 일치한 숫자 개수에 따라 최고 순위와 최저 순위를 계산합니다.
+        answer[0] = (maxMatchCount == 0) ? 6 : 7 - maxMatchCount;
+        answer[1] = (minMatchCount == 0) ? 6 : 7 - minMatchCount;
+        
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        int[] lottos1 = {44, 1, 0, 0, 31, 25};
+        int[] win_nums1 = {31, 10, 45, 1, 6, 19};
+        int[] result1 = solution.solution(lottos1, win_nums1);
+        System.out.println(Arrays.toString(result1)); // [3, 5]
+
+        int[] lottos2 = {0, 0, 0, 0, 0, 0};
+        int[] win_nums2 = {38, 19, 20, 40, 15, 25};
+        int[] result2 = solution.solution(lottos2, win_nums2);
+        System.out.println(Arrays.toString(result2)); // [1, 6]
+
+        int[] lottos3 = {45, 4, 35, 20, 3, 9};
+        int[] win_nums3 = {20, 9, 3, 45, 4, 35};
+        int[] result3 = solution.solution(lottos3, win_nums3);
+        System.out.println(Arrays.toString(result3)); // [1, 1]
+    }
+}
